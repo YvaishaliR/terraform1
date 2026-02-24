@@ -26,14 +26,18 @@ jobs:
       uses: hashicorp/setup-terraform@v3
 
     - name: Terraform Init
+      working-directory: ./platform
       run: terraform init
 
     - name: Terraform Validate
+      working-directory: ./platform
       run: terraform validate
 
     - name: Terraform Plan
+      working-directory: ./platform
       run: terraform plan -out=tfplan
 
     - name: Terraform Apply
+      working-directory: ./platform
       if: github.ref == 'refs/heads/main'
       run: terraform apply -auto-approve tfplan
