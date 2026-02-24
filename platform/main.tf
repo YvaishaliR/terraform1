@@ -1,5 +1,5 @@
 module "management_group"{
-    source="modules/management_groups"
+    source="./modules/management_groups"
     sub1=var.sub1
     sub2=var.sub2
 }
