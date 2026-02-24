@@ -10,14 +10,15 @@ module "resource_group"{
     location = var.location
 }
 
-# module "log_analytics"{
-#     source = "../modules/log_analytics"
-#     name = "rg-platform-monitoring"
-#     location = var.location
-#     resource_group_name = module.resource_group.rg_name
-#     tags=var.commontags
+module "log_analytics"{
+    source = "../modules/log_analytics"
+
+    name = "rg-platform-monitoring"
+    location = var.location
+    resource_group_name = module.resource_group.rg_name
+    tags=var.commontags
     
-# }
+}
 
 # module "policy"{
 #     source="../modules/policy"
