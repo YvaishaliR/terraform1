@@ -4,22 +4,22 @@ module "management_group"{
     sub2=var.sub2
 }
 
-module "resource_group"{
-    source = "../../alz_terraform_alz/modules/rg"
-    name="rg_alz"
-    location = var.location
-}
+# module "resource_group"{
+#     source = "../../alz_terraform_alz/modules/rg"
+#     name="rg_alz"
+#     location = var.location
+# }
 
-module "log_analytics"{
-    source = "../modules/log_analytics"
-    name = "rg-platform-monitoring"
-    location = var.location
-    resource_group_name = module.resource_group.rg_name
-    tags=var.commontags
+# module "log_analytics"{
+#     source = "../modules/log_analytics"
+#     name = "rg-platform-monitoring"
+#     location = var.location
+#     resource_group_name = module.resource_group.rg_name
+#     tags=var.commontags
     
-}
+# }
 
-module "policy"{
-    source="../modules/policy"
-    management_group_id = module.management_group.corpid
-}
+# module "policy"{
+#     source="../modules/policy"
+#     management_group_id = module.management_group.corpid
+# }
