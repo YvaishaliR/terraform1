@@ -2,9 +2,9 @@ variable "location" {
   type = string
 }
 
-variable "billing_scope_id"{
-    type=string
-}
+# variable "billing_scope_id"{
+#     type=string
+# }
 
 variable "commontags"{
   type=map(string)
