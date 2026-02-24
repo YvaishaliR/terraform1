@@ -4,11 +4,11 @@ module "management_group"{
     sub2=var.sub2
 }
 
-# module "resource_group"{
-#     source = "../../modules/rg"
-#     name="rg_alz"
-#     location = var.location
-# }
+module "resource_group"{
+    source = "../modules/rg"
+    name="rg_alz"
+    location = var.location
+}
 
 # module "log_analytics"{
 #     source = "../modules/log_analytics"
@@ -23,3 +23,4 @@ module "management_group"{
 #     source="../modules/policy"
 #     management_group_id = module.management_group.corpid
 # }
+
