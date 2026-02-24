@@ -1,0 +1,14 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+terraform.tfvars
+
+# Sensitive files
+*.pem
+*.key
+*.pfx
+
+# OS files
+.DS_Store
