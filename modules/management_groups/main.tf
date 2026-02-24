@@ -2,9 +2,9 @@ data "azurerm_subscription" "sub1" {
     subscription_id = var.sub1 
 }
 
-data "azurerm_subscription" "sub2" {
-    subscription_id = var.sub2 
-}
+# data "azurerm_subscription" "sub2" {
+#     subscription_id = var.sub2 
+# }
 
 resource "azurerm_management_group" "corp" {
   
@@ -41,7 +41,7 @@ resource "azurerm_management_group_subscription_association" "platform_sub" {
   subscription_id     = data.azurerm_subscription.sub1.id
 }
 
-resource "azurerm_management_group_subscription_association" "prod_sub" {
-  management_group_id = azurerm_management_group.prod.id
-  subscription_id     = data.azurerm_subscription.sub2.id
-}
+# resource "azurerm_management_group_subscription_association" "prod_sub" {
+#   management_group_id = azurerm_management_group.prod.id
+#   subscription_id     = data.azurerm_subscription.sub2.id
+# }
