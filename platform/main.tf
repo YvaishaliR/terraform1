@@ -1,11 +1,11 @@
 module "management_group"{
-    source="../../alz_terraform_alz/modules/management_groups"
+    source="../../modules/management_groups"
     sub1=var.sub1
     sub2=var.sub2
 }
 
 # module "resource_group"{
-#     source = "../../alz_terraform_alz/modules/rg"
+#     source = "../../modules/rg"
 #     name="rg_alz"
 #     location = var.location
 # }
